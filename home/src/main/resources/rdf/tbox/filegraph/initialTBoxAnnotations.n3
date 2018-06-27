@@ -2441,7 +2441,18 @@ geo:hasStatistics
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 obo:IAO_0000013
-      rdfs:label "Journal Article"@en-US .
+      rdfs:label "Journal Article"@en-US ;
+      vitro:displayLimitAnnot
+              "-1"^^xsd:int ;
+      vitro:displayRankAnnot
+              "-1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 obo:ARG_2000081
       rdfs:label "American Board of Physical Medicine and Rehabilitation"@en-US .
@@ -2696,7 +2707,7 @@ vivo:Award
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:hiddenFromPublishBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppublications> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGroupHonors> ;
       vitro:prohibitedFromUpdateBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
