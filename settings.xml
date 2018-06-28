@@ -7,7 +7,7 @@
             <properties>
                 <app-name>vivo</app-name>
 
-                <vivo-dir>/usr/local/vivo/vivo-cub-dev/vdata</vivo-dir>
+                <vivo-dir>/usr/local/vivo/vivo-cub-193/vdata</vivo-dir>
                 <tomcat-dir>/usr/local/tomcat.local/tomcat-cub</tomcat-dir>
 
                 <default-theme>wilma</default-theme>
