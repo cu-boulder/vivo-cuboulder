@@ -655,7 +655,7 @@ local:informationResourceInEditorshipContext a :ConfigContext ;
 local:informationResourceInEditorshipConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-informationResourceInEditorship.xml"^^xsd:string ;
     rdfs:label "informationResourceInEditorship"@en-US;
-    :displayName "editors" ;
+    :displayName "CU Boulder Editors" ;
     vitro:displayRankAnnot 12;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
