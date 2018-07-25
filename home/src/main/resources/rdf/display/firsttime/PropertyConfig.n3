@@ -1103,8 +1103,8 @@ local:fullNameConfig a :ObjectPropertyDisplayConfig ;
     rdfs:label "fullName"@en-US;
     :displayName "full name" ;
     vitro:displayRankAnnot 10;
-    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
-    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:editor ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:editor ;
     vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.AddFullNameToPersonGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupaddress> .
 
