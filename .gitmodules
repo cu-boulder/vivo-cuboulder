@@ -1,0 +1,3 @@
+[submodule "webapp/src/main/webapp/themes/cu-boulder/expmap"]
+	path = webapp/src/main/webapp/themes/cu-boulder/expmap
+	url = https://github.com/cu-boulder/expertsmap

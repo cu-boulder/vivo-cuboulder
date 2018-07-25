@@ -60,8 +60,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
              <div class="searchTOC" id="expertsmap" style="width: 75.5%; margin: 10px 4px 0px 0px;font-size:10pt;color:black;"> <!-- why is this style hardcoded?? -->
                  <!--[IF !lte IE 8]> -->
                  <a href="/expertsmap#${querytext}%7C100%7C0">
-                        <img style="position: absolute; margin-top:-25px; margin-left:-90px; width:55px; height:55px; float:left" alt="new feature" src="/themes/cu-boulder/expertsmap/new.png">
-                        <img style="width:180px; height:110px; margin-top: -25px; margin-left: -28px; z-index: -1; float:left" alt="experts map" src="/themes/cu-boulder/expertsmap/expertmap2.png">
+                        <img style="position: absolute; margin-top:-25px; margin-left:-90px; width:55px; height:55px; float:left" alt="new feature" src="/themes/cu-boulder/expmap/images/new.png">
+                        <img style="width:180px; height:110px; margin-top: -25px; margin-left: -28px; z-index: -1; float:left" alt="experts map" src="/themes/cu-boulder/expmap/images/expertmap2.png">
                  </a>
                  <a href="/expertsmap#${querytext}%7C100%7C0">View results in CU Experts Map</a>
                  <!-- <![endif]-->
@@ -73,8 +73,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                  </#list>
              </ul>
              <div class="searchTOC" style="width: 75.5%; margin: 10px 4px 0px 0px;font-size:10pt;color:black;">
-                For <b>equipment and analytical services</b>, if the desired results were not found, please check back as they are actively updated or
-                contact the <a href="mailto:industry@colorado.edu">Office of Industry Collaboration</a>
              </div> <!-- end searchTOC -->
         </div> <!-- end searchTOC -->
     </#if>
