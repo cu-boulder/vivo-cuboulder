@@ -57,7 +57,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
              <#-- <li role="listitem"><a title="log in to manage this site" href="${urls.login}">Log in</a></li> -->
             <li role="listitem"><a href="${urls.about}" title="about">About</a></li>
             <#if urls.contact??>
-                <li role="listitem"><a href="${urls.contact}" title="contact us">Contact Us</a></li>
+                <#-- <li role="listitem"><a href="${urls.contact}" title="contact us">Contact Us</a></li> -->
             </#if> 
           </#if>
         </ul>
