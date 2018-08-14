@@ -185,6 +185,13 @@ display:PublicationFacet
     display:isSelfContainedTemplate "true" ;
     display:requiresBodyTemplate "publications.ftl" .
 
+display:Expertsmap
+    a display:Page;
+    display:title "Expertsmap" ;
+    display:urlMapping "/expertsmap" ;
+    display:isSelfContainedTemplate "true" ;
+    display:requiresBodyTemplate "expertsmap.ftl" .
+
 display:Honors
     a display:Page ;
     a display:ClassGroupPage;
