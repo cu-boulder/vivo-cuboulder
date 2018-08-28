@@ -125,8 +125,9 @@
   <owl:ObjectProperty rdf:about="https://experts.colorado.edu/ontology/vivo-fis#has_honored_member">
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-        <rdfs:label xml:lang="en-us">honored faculty member</rdfs:label>
+        <rdfs:label xml:lang="en-us">award or honor received</rdfs:label>
         <vitro:inPropertyGroupAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/default#n4400"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
   </owl:ObjectProperty>
 
 </rdf:RDF>
