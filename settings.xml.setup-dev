@@ -7,7 +7,7 @@
             <properties>
                 <app-name>vivo</app-name>
 
-                <vivo-dir>/usr/local/vivo/vivo-19-base/vdata</vivo-dir>
+                <vivo-dir>/usr/local/vivo/vivo-cub-setup-dev/vdata</vivo-dir>
                 <tomcat-dir>/usr/local/tomcat.local/tomcat-cub-setup</tomcat-dir>
                 <vivo-installer-dir>../vivo-cuboulder</vivo-installer-dir>
                 <default-theme>wilma</default-theme>

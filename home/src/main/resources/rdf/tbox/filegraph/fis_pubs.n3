@@ -35,13 +35,13 @@
       vitro:ontologyPrefixAnnot "pubs"^^xsd:string .
 
 pubs:ConferenceProceeding a owl:Class ;
-        rdfs:subclassOf bibo:Article ;
+        rdfs:subClassOf bibo:Article ;
         rdfs:label "Conference Proceeding" ;
         vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
         vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppublications> .
 
 pubs:ScholarlyEdition a owl:Class ;
-        rdfs:subclassOf bibo:Article ;
+        rdfs:subClassOf bibo:Article ;
         rdfs:label "Scholarly Edition" ;
         vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
         vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppublications> .
