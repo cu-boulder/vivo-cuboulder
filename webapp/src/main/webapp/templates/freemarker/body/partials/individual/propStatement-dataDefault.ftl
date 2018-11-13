@@ -16,7 +16,7 @@
 <#macro showStatement statement property datatype>
     <#assign theValue = statement.value />
 
-   <#if property.rangeDatatypeURI?? && theValue?contains("http")>
+   <#if datatype == "anyURI" && theValue?starts_with("http")>
 	<#assign theValue = "<a href=\"" + statement.value + "\" target=\"_blank\">" + statement.value + "</a>" />
    </#if>
 	
