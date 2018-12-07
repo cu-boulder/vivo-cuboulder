@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?><rdf:RDF
-
     xmlns:c4o="http://purl.org/spar/c4o/"
     xmlns:vitro-public="http://vitro.mannlib.cornell.edu/ns/vitro/public#"
     xmlns:obo="http://purl.obolibrary.org/obo/"
@@ -27,87 +26,61 @@
     xmlns:fabio="http://purl.org/spar/fabio/"
     xmlns:vlocal="https://experts.colorado.edu/ontology/vivo-fis#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-
   <owl:Ontology rdf:about="https://experts.colorado.edu/ontology/vivo-fis">
     <rdfs:label xml:lang="en-US">VIVO FIS Extension</rdfs:label>
     <vitro:ontologyPrefixAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >vlocal</vitro:ontologyPrefixAnnot>
   </owl:Ontology>
   <owl:Class rdf:about="https://experts.colorado.edu/ontology/vivo-fis#ResearchArea">
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:label>Research Area</rdfs:label>
-    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label>Research Area</rdfs:label>
+          <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
   </owl:Class>
-  <owl:Class rdf:about="https://experts.colorado.edu/ontology/vivo-fis#InternalAwardingOrganization">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="https://experts.colorado.edu/ontology/vivo-fis#AwardingOrganization"/>
-    </rdfs:subClassOf>
-    <rdfs:label>Internal Awarding Organization</rdfs:label>
-    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://experts.colorado.edu/ontology/vivo-fis#ExternalAwardOrHonor">
-    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Award"/>
-    <rdfs:label>External Award Or Honor</rdfs:label>
-    <vitro:inClassGroup rdf:resource="https://experts.colorado.edu/ontology/vivo-fis#vitroClassGroupHonors"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://experts.colorado.edu/ontology/vivo-fis#AwardingOrganization">
-    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-    <rdfs:label>Awarding Organization</rdfs:label>
-    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://experts.colorado.edu/ontology/vivo-fis#InternalAwardOrHonor">
-    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Award"/>
-    <rdfs:label>Internal Award Or Honor</rdfs:label>
-    <vitro:inClassGroup rdf:resource="https://experts.colorado.edu/ontology/vivo-fis#vitroClassGroupHonors"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://experts.colorado.edu/ontology/vivo-fis#IndustrySector">
-    <rdfs:subclassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:label>Industry Sector</rdfs:label>
-    <owl:equivalentClass rdf:resource="https://experts.colorado.edu/ontology/vivo-fis#IndustrySector"/>
-    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://experts.colorado.edu/ontology/vivo-fis#ExternalAwardingOrganization">
-    <rdfs:subClassOf rdf:resource="https://experts.colorado.edu/ontology/vivo-fis#AwardingOrganization"/>
-    <rdfs:label>External Awarding Organization</rdfs:label>
-    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://experts.colorado.edu/ontology/vivo-fis#otherResearchersStaff">
-    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Catch all group for non Faculty positions</obo:IAO_0000115>
-    <rdfs:label xml:lang="en-US">Other Researchers and Staff</rdfs:label>
-    <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-    <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >That is a position held by a non faculty member such as a PRA, PostDoc, or Staff</obo:IAO_0000112>
-    <rdfs:label>other researchers and staff</rdfs:label>
-    <vitro:extendedLinkedData rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</vitro:extendedLinkedData>
-    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Position"/>
-    <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >PostDoc</obo:IAO_0000112>
-    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-    <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-    <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#editor"/>
-    <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-    >3</vitro:displayRankAnnot>
-    <vitro:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-    >-1</vitro:displayLimitAnnot>
-  </owl:Class>
-  <owl:ObjectProperty rdf:about="https://experts.colorado.edu/ontology/vivo-fis#has_honored_member">
-    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+ <owl:Class rdf:about="https://experts.colorado.edu/ontology/vivo-fis#ExternalAwardOrHonor">
+          <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Award"/>
+          <rdfs:label>External Award Or Honor</rdfs:label>
+          <vitro:inClassGroup rdf:resource="https://experts.colorado.edu/ontology/vivo-fis#vitroClassGroupHonors"/>
+ </owl:Class>
+ <owl:Class rdf:about="https://experts.colorado.edu/ontology/vivo-fis#InternalAwardOrHonor">
+          <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Award"/>
+          <rdfs:label>Internal Award Or Honor</rdfs:label>
+          <vitro:inClassGroup rdf:resource="https://experts.colorado.edu/ontology/vivo-fis#vitroClassGroupHonors"/>
+ </owl:Class>
+ <owl:Class rdf:about="https://experts.colorado.edu/ontology/vivo-fis#AwardingOrganization">
+          <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+          <rdfs:label>Awarding Organization</rdfs:label>
+          <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
+ </owl:Class>
+ <owl:Class rdf:about="https://experts.colorado.edu/ontology/vivo-fis#InternalAwardingOrganization">
+          <rdfs:subClassOf rdf:resource="https://experts.colorado.edu/ontology/vivo-fis#AwardingOrganization"/>
+          <rdfs:label>Internal Awarding Organization</rdfs:label>
+          <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
+ </owl:Class>
+ <owl:Class rdf:about="https://experts.colorado.edu/ontology/vivo-fis#ExternalAwardingOrganization">
+          <rdfs:subClassOf rdf:resource="https://experts.colorado.edu/ontology/vivo-fis#AwardingOrganization"/>
+          <rdfs:label>External Awarding Organization</rdfs:label>
+          <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
+ </owl:Class>
+
+ <owl:Class rdf:about="https://experts.colorado.edu/ontology/vivo-fis#otherResearchersStaff">
+        <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Position"/>
+        <rdfs:label>other researchers and staff</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catch all group for non Faculty positions</obo:IAO_0000115>
+        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PostDoc</obo:IAO_0000112>
+        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">That is a position held by a non faculty member such as a PRA, PostDoc, or Staff</obo:IAO_0000112>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#editor"/>
+        <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</vitro:displayRankAnnot>
+ </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="https://experts.colorado.edu/ontology/vivo-fis#unitIDCode">
     <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-    <rdfs:label xml:lang="en-us">award or honor received</rdfs:label>
-    <vitro:inPropertyGroupAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/default#n4400"/>
+    <rdfs:label xml:lang="en-US">Unit ID Code</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://experts.colorado.edu/ontology/vivo-fis#hasSector">
-    <rdfs:label xml:lang="en-US">industry sector</rdfs:label>
-    <rdfs:range rdf:resource="http://vivoweb.org/ontology/core#Equipment"/>
-    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-    <vitro:inPropertyGroupAnnot rdf:resource="http://vivoweb.org/ontology#vitroPropertyGroupidentifiers"/>
     <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#editor"/>
-    <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >industry sector</vitro:publicDescriptionAnnot>
-  </owl:ObjectProperty>
+  </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="https://experts.colorado.edu/ontology/vivo-fis#spinId">
     <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:label xml:lang="en-US">SPIN ID</rdfs:label>
@@ -116,6 +89,46 @@
     <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#editor"/>
     <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#editor"/>
   </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:about="https://experts.colorado.edu/ontology/vivo-fis#deptid">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <rdfs:label xml:lang="en-US">Department ID</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#editor"/>
+    <vitro:inPropertyGroupAnnot rdf:resource="http://vivoweb.org/ontology#vitroPropertyGroupidentifiers"/>
+    <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#editor"/>
+    <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CU-Boulder Department ID</vitro:publicDescriptionAnnot>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="https://experts.colorado.edu/ontology/vivo-fis#uuid">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:label xml:lang="en-US">UUID</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#editor"/>
+    <vitro:inPropertyGroupAnnot rdf:resource="http://vivoweb.org/ontology#vitroPropertyGroupidentifiers"/>
+    <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#editor"/>
+    <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CU-Boulder ITS UUID</vitro:publicDescriptionAnnot>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="https://experts.colorado.edu/ontology/vivo-fis#fisId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:label xml:lang="en-US">FIS ID</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#editor"/>
+    <vitro:inPropertyGroupAnnot rdf:resource="http://vivoweb.org/ontology#vitroPropertyGroupidentifiers"/>
+    <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#editor"/>
+    <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >FIS unique identifier</vitro:publicDescriptionAnnot>
+  </owl:FunctionalProperty>
+  <owl:ObjectProperty rdf:about="https://experts.colorado.edu/ontology/vivo-fis#has_honored_member">
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:label xml:lang="en-us">award or honor received</rdfs:label>
+        <vitro:inPropertyGroupAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/default#n4400"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+  </owl:ObjectProperty>
   <owl:DatatypeProperty rdf:about="https://experts.colorado.edu/ontology/vivo-fis#googleScholar">
     <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
@@ -162,23 +175,6 @@
     <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     <rdfs:label xml:lang="en-US">Academia.edu</rdfs:label>
   </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="https://experts.colorado.edu/ontology/vivo-fis#vita">
-    <rdfs:label xml:lang="en-US">vita</rdfs:label>
-    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-    <vitro:inPropertyGroupAnnot rdf:resource="http://vivoweb.org/ontology#vitroPropertyGroupaddress"/>
-    <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#editor"/>
-    <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >vita</vitro:publicDescriptionAnnot>
-    <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-    >20</vitro:displayRankAnnot>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="https://experts.colorado.edu/ontology/vivo-fis#unitIDCode">
-    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-    <rdfs:label xml:lang="en-US">Unit ID Code</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-    <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#editor"/>
-  </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="https://experts.colorado.edu/ontology/vivo-fis#github">
     <rdfs:subPropertyOf rdf:resource="http://vivoweb.org/ontology/core#identifier"/>
     <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
@@ -203,37 +199,6 @@
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
     <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
   </owl:DatatypeProperty>
-  <owl:FunctionalProperty rdf:about="https://experts.colorado.edu/ontology/vivo-fis#fisId">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <rdfs:label xml:lang="en-US">FIS ID</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#editor"/>
-    <vitro:inPropertyGroupAnnot rdf:resource="http://vivoweb.org/ontology#vitroPropertyGroupidentifiers"/>
-    <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#editor"/>
-    <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >FIS unique identifier</vitro:publicDescriptionAnnot>
-  </owl:FunctionalProperty>
-  <owl:FunctionalProperty rdf:about="https://experts.colorado.edu/ontology/vivo-fis#uuid">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <rdfs:label xml:lang="en-US">UUID</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#editor"/>
-    <vitro:inPropertyGroupAnnot rdf:resource="http://vivoweb.org/ontology#vitroPropertyGroupidentifiers"/>
-    <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#editor"/>
-    <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >CU-Boulder ITS UUID</vitro:publicDescriptionAnnot>
-  </owl:FunctionalProperty>
-  <owl:FunctionalProperty rdf:about="https://experts.colorado.edu/ontology/vivo-fis#deptid">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-    <rdfs:label xml:lang="en-US">Department ID</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#editor"/>
-    <vitro:inPropertyGroupAnnot rdf:resource="http://vivoweb.org/ontology#vitroPropertyGroupidentifiers"/>
-    <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#editor"/>
-    <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >CU-Boulder Department ID</vitro:publicDescriptionAnnot>
-  </owl:FunctionalProperty>
+
 </rdf:RDF>
+
