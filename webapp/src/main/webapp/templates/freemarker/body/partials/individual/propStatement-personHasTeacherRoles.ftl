@@ -37,6 +37,6 @@
     </#local>
 
     
-    ${linkedIndividual} ${statement.activityDesc!} ${"("} ${statement.roleDesc!} ${")"} ${dt.dateTimeIntervalShort(statement.dateTimeStart, "yearMonthPrecision", statement.dateTimeEnd, "yearMonthPrecision", true)!} 
+    ${linkedIndividual}  ${statement.activityDesc!} ${statement.roleDesc!} ${dt.dateTimeIntervalShort(statement.dateTimeStart, "yearMonthPrecision", statement.dateTimeEnd, "yearMonthPrecision", true)!} 
 </#if>
 </#macro>

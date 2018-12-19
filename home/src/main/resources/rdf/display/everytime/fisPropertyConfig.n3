@@ -26,7 +26,7 @@ local:personHasTeacherRoleContext a :ConfigContext ;
 
 local:personHasTeacherRoleConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-personHasTeacherRole.xml"^^xsd:string ;
-    rdfs:label "hasTeacherRole"@en-US;
+    rdfs:label "personHasTeacherRole"@en-US;
     :displayName "courses taught" ;
     vitro:displayRankAnnot 20;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
@@ -36,15 +36,15 @@ local:personHasTeacherRoleConfig a :ObjectPropertyDisplayConfig ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupteaching> .
 
 
-local:teacherRoleContext a :ConfigContext ;
-    :hasConfiguration local:teacherRoleConfig ;
+local:courseHasTeacherRoleContext a :ConfigContext ;
+    :hasConfiguration local:courseHasTeacherRoleConfig ;
     :configContextFor <http://purl.obolibrary.org/obo/BFO_0000055> ;
     :qualifiedByDomain      <http://vivoweb.org/ontology/core#Course> ;
     :qualifiedBy      vivo:TeacherRole .
 
-local:teacherRoleConfig a :ObjectPropertyDisplayConfig ;
-    :listViewConfigFile "listViewConfig-teacherRole.xml"^^xsd:string ;
-    rdfs:label "relatedRole"@en-US;
+local:courseHasTeacherRoleConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-courseHasTeacherRole.xml"^^xsd:string ;
+    rdfs:label "courseHasTeacherRole"@en-US;
     :displayName "instructor(s)" ;
     vitro:displayRankAnnot 17;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;

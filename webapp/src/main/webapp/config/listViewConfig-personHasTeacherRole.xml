@@ -139,5 +139,5 @@
         } 
     </query-construct>
 
-    <template>propStatement-personTeacherRoles.ftl</template>
+    <template>propStatement-personHasTeacherRoles.ftl</template>
 </list-view-config>
