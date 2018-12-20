@@ -34,9 +34,11 @@
     
     <#local dateTime>
         <@dt.yearIntervalSpan "${statement.dateTimeStart!}" "${statement.dateTimeEnd!}" />
+<#-- next line is for year month precision -->
+<#--        ${dt.dateTimeIntervalShort(statement.dateTimeStart, "yearMonthPrecision", statement.dateTimeEnd, "yearMonthPrecision", true)!} -->
     </#local>
 
     
-    ${linkedIndividual}  ${statement.activityDesc!} ${statement.roleDesc!} ${dt.dateTimeIntervalShort(statement.dateTimeStart, "yearMonthPrecision", statement.dateTimeEnd, "yearMonthPrecision", true)!} 
+    ${linkedIndividual}  ${statement.activityDesc!} ${statement.roleDesc!} 
 </#if>
 </#macro>

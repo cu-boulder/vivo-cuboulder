@@ -49,5 +49,5 @@
         </#if>
     </#local>
 
-    ${linkedIndividual}&nbsp;${roleLabel!}&nbsp;${dt.dateTimeIntervalShort(statement.dateTimeStart, "yearMonthPrecision", statement.dateTimeEnd, "yearMonthPrecision", true)!} 
+    ${linkedIndividual}&nbsp;${roleLabel!}
 </#macro>
