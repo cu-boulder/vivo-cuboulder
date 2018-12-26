@@ -208,22 +208,26 @@ local:orgHasMemberRoleConfig a :ObjectPropertyDisplayConfig ;
     vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.AddMemberRoleToPersonGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupaffiliation> .
 
-local:hasTeacherRoleContext a :ConfigContext ;
-    :hasConfiguration local:hasTeacherRoleConfig ;
-    :configContextFor <http://purl.obolibrary.org/obo/RO_0000053> ;
-    :qualifiedByDomain  <http://xmlns.com/foaf/0.1/Person>  ;
-    :qualifiedBy      <http://vivoweb.org/ontology/core#TeacherRole> .
-
-local:hasTeacherRoleConfig a :ObjectPropertyDisplayConfig ;
-    :listViewConfigFile "listViewConfig-roleRealizedIn.xml"^^xsd:string ;
-    rdfs:label "hasTeacherRole"@en-US;
-    :displayName "teaching activities" ;
-    vitro:displayRankAnnot 20;
-    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
-    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
-    vitro:stubObjectPropertyAnnot "true"^^xsd:boolean ;
-    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.AddTeacherRoleToPersonGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
-    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupteaching> .
+#
+# DRE 2018/12/19 - Commented out this faux property on realizes. Handling roles directly on the role subclass, like TeacherRole, directly with it's own listviewConfig
+#                  This is in display/everytime/fisPropertyConfig.n3
+#
+#local:hasTeacherRoleContext a :ConfigContext ;
+#    :hasConfiguration local:hasTeacherRoleConfig ;
+#    :configContextFor <http://purl.obolibrary.org/obo/RO_0000053> ;
+#    :qualifiedByDomain  <http://xmlns.com/foaf/0.1/Person>  ;
+#    :qualifiedBy      <http://vivoweb.org/ontology/core#TeacherRole> .
+#
+#local:hasTeacherRoleConfig a :ObjectPropertyDisplayConfig ;
+#    :listViewConfigFile "listViewConfig-roleRealizedIn.xml"^^xsd:string ;
+#    rdfs:label "hasTeacherRole"@en-US;
+#    :displayName "teaching activities" ;
+#    vitro:displayRankAnnot 20;
+#    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+#    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+#    vitro:stubObjectPropertyAnnot "true"^^xsd:boolean ;
+#    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.AddTeacherRoleToPersonGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
+#    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupteaching> .
 
 local:hasEditorRoleContext a :ConfigContext ;
     :hasConfiguration local:hasEditorRoleConfig ;
@@ -1906,21 +1910,24 @@ local:addressLocationConfig a :ObjectPropertyDisplayConfig ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGrouplocation> .
 
 ### roles using the BFO_0000055 property ###
-
-local:bfo_0000055Context a :ConfigContext ;
-    :hasConfiguration local:bfo_0000055Config ;
-    :configContextFor <http://purl.obolibrary.org/obo/BFO_0000055> ;
-    :qualifiedBy      <http://purl.obolibrary.org/obo/BFO_0000023> .
-
-local:bfo_0000055Config a :ObjectPropertyDisplayConfig ;
-    :listViewConfigFile "listViewConfig-relatedRole.xml"^^xsd:string ;
-    rdfs:label "relatedRole"@en-US;
-    :displayName "participant" ;
-    vitro:displayRankAnnot 17;
-    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
-    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
-    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.ProjectHasParticipantGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
-    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
+#
+# DRE 2018/12/19 - Commented out generic role faux property on realizes. Handling roles directly on the role subclass, like TeacherRole, directly with it's own listviewConfig
+#                  This is in display/everytime/fisPropertyConfig.n3
+#
+#local:bfo_0000055Context a :ConfigContext ;
+#    :hasConfiguration local:bfo_0000055Config ;
+#    :configContextFor <http://purl.obolibrary.org/obo/BFO_0000055> ;
+#    :qualifiedBy      <http://purl.obolibrary.org/obo/BFO_0000023> .
+#
+#local:bfo_0000055Config a :ObjectPropertyDisplayConfig ;
+#    :listViewConfigFile "listViewConfig-relatedRole.xml"^^xsd:string ;
+#    rdfs:label "relatedRole"@en-US;
+#    :displayName "participant" ;
+#    vitro:displayRankAnnot 17;
+#    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+#    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+#    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.ProjectHasParticipantGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
+#    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
 
 ### grant roles using the core:relates property ###
 
