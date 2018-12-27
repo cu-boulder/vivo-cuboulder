@@ -78,9 +78,9 @@
             <div class="crunch-80">
             <div id="awards-txt" class="col-1-2"><p>Faculty Affairs is pleased to recognize CU-Boulder's faculty for their important work.
                 This annual publication features awards at the campus level and beyond.</p></div>
-            <div id="awards-img" class="col-1-2"><p><a href="http://www.colorado.edu/facultyaffairs/sites/default/files/attached-files/2017_faculty_achivement_brochure_.pdf">
-                <img style="display: block; margin-left: auto; margin-right: auto" src="/themes/cu-boulder/images/Faculty_Awards_Cover.png" height="111" width="60" alt="A Celebration of Faculty Achievement 2017"></a></p>
-            <p style="text-align: center"><a href="http://www.colorado.edu/facultyaffairs/sites/default/files/attached-files/2017_faculty_achivement_brochure_.pdf">2017</a>
+            <div id="awards-img" class="col-1-2"><p><a href="http://www.colorado.edu/facultyaffairs/sites/default/files/attached-files/final_2018_celebration_of_faculty_achievement.pdf">
+                <img style="display: block; margin-left: auto; margin-right: auto" src="/themes/cu-boulder/images/Faculty_Awards_Cover.png" height="111" width="60" alt="A Celebration of Faculty Achievement 2018"></a></p>
+            <p style="text-align: center"><a href="http://www.colorado.edu/facultyaffairs/sites/default/files/attached-files/final_2018_celebration_of_faculty_achievement.pdf">2018</a>
                 &nbsp;&nbsp;&nbsp;
                 <a href="http://www.colorado.edu/facultyaffairs/celebration-faculty-achievement">Prior Years</a></p>
             </div>
