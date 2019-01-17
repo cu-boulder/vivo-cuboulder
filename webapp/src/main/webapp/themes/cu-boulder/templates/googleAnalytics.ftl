@@ -30,6 +30,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 <script type="text/javascript">  
+if (document.location.hostname.search("experts.colorado.edu") !== -1) {
  var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-34751034-1']);
   _gaq.push(['_trackPageview']);
@@ -39,5 +40,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+}
 </script>
 
