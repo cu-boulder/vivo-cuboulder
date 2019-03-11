@@ -39,6 +39,6 @@
     </#local>
 
     
-    ${linkedIndividual}  ${statement.activityDesc!} ${statement.roleDesc!} 
+    ${linkedIndividual}   ${statement.roleDesc!} 
 </#if>
 </#macro>
