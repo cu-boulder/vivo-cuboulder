@@ -71,7 +71,7 @@
                         <#if !firstPopulatedClassGroup??>
                             <#assign firstPopulatedClassGroup = group />
                         </#if>
-                        <#if !group.uri?contains("equipment") && !group.uri?contains("course") >
+                        <#if !group.uri?contains("events") && !group.uri?contains("location") >
                             <li>
                                 <a href="${urls.base}/browse">
                                     <p  class="stats-count">
