@@ -19,12 +19,16 @@
           ?role obo:BFO_0000054 ?activity .
           ?activity rdfs:label ?activityLabel .
           ?role rdfs:label ?roleLabel .
-          ?role core:description ?courseterm .
+          ?role core:dateTimeInterval ?dti .
+          ?dti core:description ?courseterm .
+          ?dti rdf:type core:DateTimeInterval .
+          ?dti core:start ?dtidstart .
+          ?dtidstart core:dateTime ?dstart .
           OPTIONAL { ?activity core:description ?activityDesc }
 
         }
         GROUP by ?activity ?activityLabel ?activityDesc ?role $roleLabel
-        order by ?activityLabel
+        order by ?activityLabel ?courseterm 
     </query-select>
     <template>propStatement-personHasTeacherRoles.ftl</template>
 </list-view-config>

@@ -23,7 +23,7 @@
 					${statement.indivLabel}
 				</#if>
     		<#else>
-        			<a href="${profileUrl(statement.uri("indivInRole"))}" title="${i18n().name}">${statement.indivLabel!statement.indivName}</a>
+        			<a href="${profileUrl(statement.uri("indivInRole"))}" title="${i18n().name}">${statement.indivInRoleLabel!statement.indivName}</a>
     		</#if>
         <#else>
             <#-- This shouldn't happen, but we must provide for it -->
@@ -49,5 +49,5 @@
         </#if>
     </#local>
 
-    ${linkedIndividual}&nbsp;${roleLabel!}
+    ${linkedIndividual}&nbsp;${'<BR>'} ${roleLabel!} ${' - '} ${statement.terms!}
 </#macro>
