@@ -13,22 +13,9 @@
 <#-- Use a macro to keep variable assignments local; otherwise the values carry over to the
      next statement -->
 <#macro showRole statement>
-<#if statement.hideThis?has_content>
-    <span class="hideThis">&nbsp;</span>
-    <script type="text/javascript" >
-        $('span.hideThis').parent().parent().addClass("hideThis");
-        if ( $('h3#RO_0000053-ResearcherRole').attr('class').length == 0 ) {
-            $('h3#RO_0000053-ResearcherRole').addClass('hiddenGrants');
-        }
-        $('span.hideThis').parent().remove();
-    </script>
-<#else>
     <#local linkedIndividual>
         <#if statement.activity??>
             <a href="${profileUrl(statement.uri("activity"))}" title="${i18n().activity_name}">${statement.activityLabel!statement.activityName}</a>
-        <#else>
-            <#-- This shouldn't happen, but we must provide for it -->
-            <a href="${profileUrl(statement.uri("role"))}" title="${i18n().missing_activity}">${i18n().missing_activity}</a>
         </#if>
     </#local>
     
@@ -39,6 +26,11 @@
     </#local>
 
     
-    ${linkedIndividual}  ${statement.activityDesc!} ${statement.roleDesc!} 
-</#if>
+    ${linkedIndividual} 
+${'<BR>'}
+${statement.roleLabel!} 
+${' - '} 
+${statement.terms!} 
+${'<BR>'}
+    ${statement.activityDesc!} 
 </#macro>
