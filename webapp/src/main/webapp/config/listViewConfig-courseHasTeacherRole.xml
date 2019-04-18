@@ -14,20 +14,15 @@
         PREFIX vcard:  &lt;http://www.w3.org/2006/vcard/ns#&gt;
         PREFIX core: &lt;http://vivoweb.org/ontology/core#&gt;
         PREFIX obo:  &lt;http://purl.obolibrary.org/obo/&gt;
-        SELECT  ?indivInRole ?indivInRoleLabel ?roleLabel ?role (group_concat(?termld; separator= ' / ') as ?terms)
+        SELECT  ?indivInRole ?indivInRoleLabel ?roleLabel ?role ?terms
         where { ?subject ?property ?role .
           ?role a  core:TeacherRole .
           ?role obo:RO_0000052 ?indivInRole .
           ?indivInRole rdfs:label ?indivInRoleLabel .
           ?role rdfs:label ?roleLabel .
-          ?dti core:description ?termld .
-          ?role core:dateTimeInterval ?dti .
-          ?dti rdf:type core:DateTimeInterval .
-          ?dti core:start ?dtidstart .
-          ?dtidstart core:dateTime ?dstart .
+          ?role core:description ?terms 
        }
-       group by ?indivInRole ?indivInRoleLabel ?roleLabel ?role
-       order by ?indivInRoleLabel ?dstart
+       order by ?indivInRoleLabel 
         
     </query-select>
 

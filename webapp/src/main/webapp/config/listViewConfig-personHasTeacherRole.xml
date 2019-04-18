@@ -12,23 +12,17 @@
         PREFIX core: &lt;http://vivoweb.org/ontology/core#&gt;
         PREFIX obo:  &lt;http://purl.obolibrary.org/obo/&gt;
 
-        select DISTINCT ?activity ?activityLabel ?activityDesc ?role $roleLabel (GROUP_CONCAT(?courseterm ; separator=" / ") as ?terms)
+        select DISTINCT ?activity ?activityLabel ?activityDesc ?role $roleLabel ?terms
         where
         { 
           ?subject ?property ?role .
           ?role obo:BFO_0000054 ?activity .
           ?activity rdfs:label ?activityLabel .
           ?role rdfs:label ?roleLabel .
-          ?role core:dateTimeInterval ?dti .
-          ?dti core:description ?courseterm .
-          ?dti rdf:type core:DateTimeInterval .
-          ?dti core:start ?dtidstart .
-          ?dtidstart core:dateTime ?dstart .
+          ?role core:description ?terms .
           OPTIONAL { ?activity core:description ?activityDesc }
-
         }
-        GROUP by ?activity ?activityLabel ?activityDesc ?role $roleLabel
-        order by ?activityLabel ?courseterm 
+        order by ?activityLabel 
     </query-select>
     <template>propStatement-personHasTeacherRoles.ftl</template>
 </list-view-config>
