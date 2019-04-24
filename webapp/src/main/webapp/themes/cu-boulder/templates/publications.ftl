@@ -26,7 +26,7 @@
             $('.facet-view-simple').facetview({
                 search_url: '/es/fispubs-v1/publication/_search',
                 page_size: 20,
-                sort: [{"publicationYear" : {"order" : "desc"}}],
+                sort: [{"publicationYear.keyword" : {"order" : "desc"}}],
                 sharesave_link: true,
                 search_button: true,
                 default_freetext_fuzzify: "*",
@@ -34,17 +34,17 @@
                 default_facet_order: "count",
                 default_facet_size: 15,
                 facets: [
-                    {'field': 'mostSpecificType', 'display': 'Publication Type'},
-                    {'field': 'authors.name.exact', 'size': 20, 'display': 'Author'},
-                    {'field': 'publishedIn.name.exact', 'display': 'Published In'},
-                    {'field': 'publicationYear', 'display': 'Year Published', 'sort':'desc', "size" : 25},
+                    {'field': 'mostSpecificType.keyword', 'display': 'Publication Type'},
+                    {'field': 'authors.name.keyword', 'size': 20, 'display': 'Author'},
+                    {'field': 'publishedIn.name.keyword', 'display': 'Published In'},
+                    {'field': 'publicationYear.keyword', 'display': 'Year Published', 'sort':'desc', "size" : 25},
                     //Example of date range histogram for future // {"field": "publicationYear", "display": "Publication Year", "type" : "date_histogram", "open" : false,"sort":"desc", "size" : 25},
-                    {'field': 'authors.organization.name.exact', 'display': 'Author Organization'},
-                    {'field': 'authors.researchArea.name.exact', 'display': 'Author Research Area'},
+                    {'field': 'authors.organization.name.keyword', 'display': 'Author Organization'},
+                    {'field': 'authors.researchArea.name.keyword', 'display': 'Author Research Area'},
 		    {'field': 'amscore', 'display': 'Altmetric Range', "type" : "range", "range" : [{"to" : 0.001, "display" : "0 or no value"}, {"from" : 0.001, "to" :  100, "display" : "1 - 99"}, {"from" : 100, "to" : 500, "display" : "100 - 499"}, {"from" : 500, "display" : "500+"}], 'sort':'desc', "size" : 25},
                 ],
                 search_sortby: [
-                    {'display':'Title','field':'title.exact'},
+                    {'display':'Title','field':'name.keyword'},
                     {'display':'Date','field':'publicationDate'},
                     {'display':'Altmetric Attention','field':'amscore'}
                 ],
