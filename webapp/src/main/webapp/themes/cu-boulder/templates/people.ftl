@@ -106,7 +106,7 @@
                 page_size: 10,
                 sort: [
                     {"_score" : {"order" : "desc"}},
-                    {"name.exact" : {"order" : "asc"}}
+                    {"name.keyword" : {"order" : "asc"}}
                 ],
                 sharesave_link: true,
                 search_button: true,
@@ -115,12 +115,12 @@
                 default_facet_order: "count",
                 default_facet_size: 15,
                 facets: [
-                    {'field': 'organization.name.exact', 'display': 'Organization'},
-                    {'field': 'researchArea.name.exact', 'display': 'Research Area'},
-                    {'field': 'homeCountry.name.exact', 'display': 'International Activities'},
+                    {'field': 'organization.name.keyword', 'display': 'Organization'},
+                    {'field': 'researchArea.name.keyword', 'display': 'Research Area'},
+                    {'field': 'homeCountry.name.keyword', 'display': 'International Activities'},
                 ],
                 search_sortby: [
-                    {'display':'Name','field':'name.exact'}
+                    {'display':'Name','field':'name.keyword'}
                 ],
                 render_result_record: function(options, record)
                 {
