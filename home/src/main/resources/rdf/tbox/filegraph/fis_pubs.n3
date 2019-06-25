@@ -65,3 +65,23 @@ pubs:bookTitle
       vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
       vitro:publicDescriptionAnnot "book title"^^xsd:string ;
       vitro:displayRankAnnot "40"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+pubs:cuscholar
+      a       owl:DatatypeProperty ;
+      rdfs:label "Open Access Copy"@en-US ;
+      rdfs:range xsd:anyURI ;
+      vitro:displayLimitAnnot
+              "1"^^xsd:int ;
+      vitro:displayRankAnnot
+              "4"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Link to CU Scholar Open Access site"^^xsd:string .
+
