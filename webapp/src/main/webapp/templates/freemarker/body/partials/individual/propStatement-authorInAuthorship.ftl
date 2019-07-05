@@ -113,9 +113,10 @@
  
     <#local doi>
       <#if statement.doi??>
-        <a href="http://dx.doi.org/${statement.doi}" target="_blank">
-          <img src="https://img.shields.io/badge/Published%20Version--blue.svg">
-        </a>
+        <a href="http://dx.doi.org/${statement.doi}" target="_blank"><img src="https://img.shields.io/badge/Published%20Version--blue.svg"></a>
+      </#if>
+      <#if statement.cuscholar??>
+        <a href="${statement.cuscholar}" target="_blank"><img src="https://img.shields.io/badge/Open%20Access%20Copy--orange.svg"></a>
       </#if>
     </#local>
 
