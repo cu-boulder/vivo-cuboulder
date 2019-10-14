@@ -11,6 +11,7 @@
         PREFIX vitro: &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
         PREFIX obo:   &lt;http://purl.obolibrary.org/obo/&gt;
         PREFIX skos:  &lt;http://www.w3.org/2004/02/skos/core#&gt;
+        PREFIX vlocal: &lt;https://experts.colorado.edu/ontology/vivo-fis#&gt;
         
         SELECT DISTINCT
           <collated>?subclass</collated> 
@@ -18,6 +19,9 @@
             ?person
             ?personName
             ?dtv
+            ?orgid
+            ?orgname
+            ?award
         WHERE {
             ?subject ?property ?person .
             ?person rdfs:label ?personName .
@@ -25,6 +29,10 @@
             ?awardreceipt a core:AwardReceipt .
             ?awardreceipt core:relates ?award.
             ?awardreceipt core:dateTimeValue ?dt .
+            ?awardrecip core:assignedBy ?orgid .
+            ?orgid a vlocal:AwardingOrganization .
+            ?orgid rdfs:label ?orgname .
+            ?orgid core:assigns ?award .
             ?dt core:dateTime ?dtv .
             ?award a core:Award .
             ?award rdfs:label ?awardName .
@@ -40,12 +48,17 @@
         PREFIX core: &lt;http://vivoweb.org/ontology/core#&gt;
         PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
         PREFIX obo:   &lt;http://purl.obolibrary.org/obo/&gt;
+        PREFIX vlocal: &lt;https://experts.colorado.edu/ontology/vivo-fis#&gt;
         CONSTRUCT {
             ?subject ?property ?person .
             ?person core:relatedBy ?awardreceipt .
             ?awardreceipt a core:AwardReceipt .
             ?awardreceipt core:dateTimeValue ?dt .
             ?dt core:dateTime ?dtv .
+            ?awardrecip core:assignedBy ?orgid .
+            ?orgid a vlocal:AwardingOrganization .
+            ?orgid rdfs:label ?orgname .
+            ?orgid core:assigns ?award .
         } WHERE {
             ?subject ?property ?person .
             ?person rdfs:label ?personName .
@@ -53,6 +66,12 @@
             ?awardreceipt a core:AwardReceipt .
             ?awardreceipt core:dateTimeValue ?dt .
             ?dt core:dateTime ?dtv .
+            ?awardrecip core:assignedBy ?orgid .
+            ?orgid a vlocal:AwardingOrganization .
+            ?orgid rdfs:label ?orgname .
+            ?orgid core:assigns ?award .
+            ?awardreceipt core:relates ?award .
+            ?award a core:Award .
         } 
     </query-construct>
  

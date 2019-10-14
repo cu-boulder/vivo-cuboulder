@@ -11,6 +11,6 @@
 
    <#-- Create invisible DOM element to store data in DOM. This is accessed by a javascript function in
         productMods/templates/freemarker/body/individual/individual-vitro.ftl -->
-   <span data-award-type="${award_type}" data-url="${profileUrl(statement.uri("person"))}" data-person-name="${statement.personName}" data-award-name="${statement.awardName}" data-date="${statement.dtv!}">
+   <span data-award-type="${award_type}" data-url="${profileUrl(statement.uri("person"))}" data-person-name="${statement.personName}" data-award-name="${statement.awardName}" data-award-url="${profileUrl(statement.uri("award"))}" data-date="${statement.dtv!}" data-award-org-name="${statement.orgname}" data-award-org-url="${profileUrl(statement.uri("orgid"))}">
 
 </#macro>
