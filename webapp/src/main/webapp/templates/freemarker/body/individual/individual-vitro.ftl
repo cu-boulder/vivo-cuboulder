@@ -126,12 +126,15 @@ ${scripts.add('<script type="text/javascript" src="${urls.base}/js/imageUpload/i
         var type_ = info.attr('data-award-type');
         var url_ = info.attr('data-url');
         var award_name = info.attr('data-award-name');
+        var award_url = info.attr('data-award-url');
         var person_name = info.attr('data-person-name');
+        var award_org_name = info.attr('data-award-org-name');
+        var award_org_url = info.attr('data-award-org-url');
         var date_time = info.attr('data-date').substring(0,4);
 
         // If a DOM element doesn't exist for award yet, create one.
         if ($('#'+type_).length == 0) {
-            $('#has_honored_member-Person-List').append('<li class="subclass"><h3>'+award_name+'</h3><ul class="subclass-property-list" id="'+type_+'"></ul></li>');
+            $('#has_honored_member-Person-List').append('<li class="subclass"><h3><a href="'+award_url+'">'+award_name+'</a> conferred by <a href="'+award_org_url+'">'+award_org_name+'</a></h3><ul class="subclass-property-list" id="'+type_+'"></ul></li>');
         }
 
         // Add list element for each entry.
