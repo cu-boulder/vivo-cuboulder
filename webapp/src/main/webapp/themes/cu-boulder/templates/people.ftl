@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -86,7 +85,7 @@
                     {{/if}}
 
                 </div>
-<!--
+<!-- This is a prototype of a dropdown for researchOverview
 {{#if researchOverview}}
   <div class="dropdown">
    <button 
@@ -114,25 +113,6 @@
             return (mostSpecificType && mostSpecificType != "Person");
         });
 
-        Handlebars.registerHelper('listWebLinks', function(items, options) {
-            var out = "";
-
-            items.sort(function(a, b) { 
-               if (a.name < b.name) 
-                 { return 1 }
-               else { return -1}
-            });
-            for(var i = 0; i < items.length; i++) {
-               if (items[i].name == "Twitter") { items[i].wclass = "fa fa-twitter" }
-               if (items[i].name == "LinkedIn") { items[i].wclass = "fa fa-linkedin" }
-               if (items[i].name == "Webpage") { items[i].wclass = "fa fa-globe" }
-               out += options.fn(items[i]);
-            }
-            return out;
-        });
-
-
-
         Handlebars.registerHelper('expand', function(items, num, url, anchor, options) {
             var out = "";
             var z = items.length;
@@ -154,6 +134,23 @@
                     out += options.fn(items[i]);
                   }
                 }
+            }
+            return out;
+        });
+
+        Handlebars.registerHelper('listWebLinks', function(items, options) {
+            var out = "";
+
+            items.sort(function(a, b) { 
+               if (a.name < b.name) 
+                 { return 1 }
+               else { return -1}
+            });
+            for(var i = 0; i < items.length; i++) {
+               if (items[i].name == "Twitter") { items[i].wclass = "fa fa-twitter" }
+               if (items[i].name == "LinkedIn") { items[i].wclass = "fa fa-linkedin" }
+               if (items[i].name == "Webpage") { items[i].wclass = "fa fa-globe" }
+               out += options.fn(items[i]);
             }
             return out;
         });
@@ -281,16 +278,6 @@
        .weblink a {
             text-decoration: none;
         }
-
-        #facetview_filter_isDcoMember {
-            display: none; !important;
-            visibility: hidden;
-        }
-
-        #facetview_filter_group_isDcoMember {
-            display: none; !important;
-        }
-
         .help {
             margin: 10px;
             border: 2px solid #c6ebc6;
@@ -323,6 +310,7 @@
   float: left;
   position: absolute;
   overflow: hidden;
+  z-index: 5;
 }
 
 .dropdown .dropbtn {
@@ -397,7 +385,7 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-<h3> PEOPLE SEARCH </h3> Use the People Search bar directly below or the expandable Filters at left to explore Boulder faculty data. To limit search to exact terms use double quotes (" ").  Search also allows for wildcard searching by using the wildcard character (*). The filters on the left, such as Research Area, are  only searching the Research Area keywords. To search CU Experts without the filters in order to include all research fields, use the site search bar in the CU Experts page header. Filters default to 'and' logic. Toggle with the 'or' button if desired.
+      <b>SEARCH AND FILTER ON PEOPLE</b><br> The search term bar on the far right filters people whose data matches the term.  Encapsulate your term in  double quotes (" ") for exact matches. The filters on the left below, such as Research Area, are  only searching the Research Area keywords. The filters default to 'and' logic. Toggle with the 'or' button if desired. The filters and search term bar can be combined to help you narrow down the list of people you are interested in. To search all data in  CU Experts use the site search bar in the CU Experts page header. 
     </div>
   </div>
   <div class="facet-view-simple"> </div>
