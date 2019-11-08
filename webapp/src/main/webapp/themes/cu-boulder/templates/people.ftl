@@ -117,7 +117,11 @@
         Handlebars.registerHelper('listWebLinks', function(items, options) {
             var out = "";
 
-            items.sort((a, b) => (a.name < b.name) ? 1 : -1);
+            items.sort(function(a, b) { 
+               if (a.name < b.name) 
+                 { return 1 }
+               else { return -1}
+            });
             for(var i = 0; i < items.length; i++) {
                if (items[i].name == "Twitter") { items[i].wclass = "fa fa-twitter" }
                if (items[i].name == "LinkedIn") { items[i].wclass = "fa fa-linkedin" }
