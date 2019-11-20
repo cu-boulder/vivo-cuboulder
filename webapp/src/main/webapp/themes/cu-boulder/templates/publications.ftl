@@ -35,6 +35,7 @@
                 default_facet_size: 15,
                 facets: [
                     {'field': 'mostSpecificType.keyword', 'display': 'Publication Type'},
+                    {'field': 'keywords.name.keyword', 'size': 20, 'display': 'Keywords'},
                     {'field': 'authors.name.keyword', 'size': 20, 'display': 'Author'},
                     {'field': 'publishedIn.name.keyword', 'display': 'Published In'},
                     {'field': 'publicationYear.keyword', 'display': 'Year Published', 'sort':'desc', "size" : 25},
