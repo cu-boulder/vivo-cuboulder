@@ -170,8 +170,16 @@
 
     <script type="text/javascript">
         jQuery(document).ready(function($) {
+	    if (document.location.hostname.search("setup") !== -1) {  
+                v_search_url = '/es/fis-setup-people/person/_search';
+	    } 
+	    else 
+	    { 
+	      v_search_url = '/es/fis/person/_search';
+	    }
+
             $('.facet-view-simple').facetview({
-                search_url: '/es/fis/person/_search',
+                search_url: v_search_url,
                 page_size: 10,
                 sort: [
                     {"_score" : {"order" : "desc"}},
