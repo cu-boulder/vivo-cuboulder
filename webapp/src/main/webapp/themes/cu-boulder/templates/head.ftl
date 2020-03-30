@@ -29,6 +29,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 <meta charset="utf-8" />
 <!-- Google Chrome Frame open source plug-in brings Google Chrome's open web technologies and speedy JavaScript engine to Internet Explorer-->
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!-- Google Analtyics Search Console Tab -->
+<meta name="google-site-verification" content="9WGiEnj8-kkG0SbYKkp39hMTj1WJeQ-Npuz0xhMeQ4o" />
 
 <title>${title} | CU Experts | CU Boulder</title>
 
