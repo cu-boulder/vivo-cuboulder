@@ -36,6 +36,11 @@
         <rdfs:label>Research Area</rdfs:label>
           <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
   </owl:Class>
+  <owl:Class rdf:about="https://experts.colorado.edu/ontology/vivo-fis#MeshTerm">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label>PubMed MeSh Term</rdfs:label>
+          <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+  </owl:Class>
  <owl:Class rdf:about="https://experts.colorado.edu/ontology/vivo-fis#ExternalAwardOrHonor">
           <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Award"/>
           <rdfs:label>External Award Or Honor</rdfs:label>
