@@ -7,7 +7,7 @@
 
     <groupId>org.vivoweb</groupId>
     <artifactId>vivo-installer</artifactId>
-    <version>1.9.3</version>
+    <version>1.11.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>VIVO Installer</name>
@@ -111,18 +111,11 @@
 
     <modules>
         <module>home</module>
-        <module>solr</module>
         <module>webapp</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.vivoweb</groupId>
-                <artifactId>vitro-solr</artifactId>
-                <version>${vitro-version}</version>
-                <type>war</type>
-            </dependency>
             <dependency>
                 <groupId>org.vivoweb</groupId>
                 <artifactId>vivo-home</artifactId>
