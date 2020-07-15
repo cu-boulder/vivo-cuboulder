@@ -15,7 +15,7 @@
 
     <script type="text/javascript" src="/themes/cu-boulder/facetview-HTML/es.js"></script>
     <script type="text/javascript" src="/themes/cu-boulder/facetview-HTML/bootstrap2.facetview.theme.js"></script>
-    <script type="text/javascript" src="/themes/cu-boulder/facetview-HTML/jquery.facetview2.js"></script>
+    <script type="text/javascript" src="/themes/cu-boulder/facetview-HTML/jquery.facetview.js"></script>
 
     <link rel="stylesheet" href="/themes/cu-boulder/facetview-HTML/css/facetview.css">
     <link rel="stylesheet" href="/themes/cu-boulder/browsers.css">
