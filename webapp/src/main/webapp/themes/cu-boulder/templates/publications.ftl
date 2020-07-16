@@ -119,7 +119,7 @@
 
                     html += "<div>"
                     if (record["cuscholar"]) {
-		        html += "<br /><span><a href=\""+record["cuscholar"]+"\" target=\"_blank\" target=\"_blank\" onclick=\"ga('send', 'event', 'CU Scholar Link', this.href); return true;\" ><img src=" + scholarBadgeURL + "></a></span>";
+		        html += "<span><a href=\""+record["cuscholar"]+"\" target=\"_blank\" target=\"_blank\" onclick=\"ga('send', 'event', 'CU Scholar Link', this.href); return true;\" ><img src=" + scholarBadgeURL + "></a></span>";
                     } 
                     html += "</div>"
 
