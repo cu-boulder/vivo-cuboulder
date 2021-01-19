@@ -23,8 +23,15 @@
 
     <script type="text/javascript">
         jQuery(document).ready(function($) {
+	    if (document.location.hostname.search("setup") !== -1) {  
+                v_search_url = '/es/fis-setup-pubs/publication/_search';
+	    } 
+	    else 
+	    { 
+	      v_search_url = '/es/fis/fispubs-v1/_search';
+	    }
             $('.facet-view-simple').facetview({
-                search_url: '/es/fispubs-v1/publication/_search',
+                search_url: v_search_url,
                 page_size: 20,
                 sort: [{"publicationYear.keyword" : {"order" : "desc"}}],
                 sharesave_link: true,
