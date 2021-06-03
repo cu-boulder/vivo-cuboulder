@@ -28,7 +28,7 @@
 	    } 
 	    else 
 	    { 
-	      v_search_url = '/es/fis/fispubs-v1/_search';
+	      v_search_url = '/es/fispubs-v1/_search';
 	    }
             $('.facet-view-simple').facetview({
                 search_url: v_search_url,
