@@ -84,4 +84,54 @@ pubs:cuscholar
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:publicDescriptionAnnot
               "Link to CU Scholar Open Access site"^^xsd:string .
+	      
+pubs:authorCount
+      a       owl:DatatypeProperty ;
+      rdfs:label "author count"@en-US ;
+      rdfs:range xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+      vitro:publicDescriptionAnnot "author count"^^xsd:string ;
+      vitro:displayRankAnnot "40"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+pubs:citationCount
+      a       owl:DatatypeProperty ;
+      rdfs:label "citation count"@en-US ;
+      rdfs:range xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+      vitro:publicDescriptionAnnot "citation count"^^xsd:string ;
+      vitro:displayRankAnnot "40"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+pubs:dataSource
+      a       owl:DatatypeProperty ;
+      rdfs:label "data source"@en-US ;
+      rdfs:range xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+      vitro:inPropertyGroupAnnot <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+      vitro:publicDescriptionAnnot "data source from Elements"^^xsd:string ;
+      vitro:displayRankAnnot "40"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+pubs:dateInCube
+      a       owl:DatatypeProperty ;
+      rdfs:label "Date in Cube"@en-US ;
+      rdfs:range xsd:dateTime ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+      vitro:publicDescriptionAnnot "Date publication appeared in Elements"^^xsd:string ;
+      vitro:displayRankAnnot "40"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+pubs:fundingAcknowledgement
+      a       owl:DatatypeProperty ;
+      rdfs:label "Funding Acknowledgement"@en-US ;
+      rdfs:range xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+      vitro:inPropertyGroupAnnot <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+      vitro:publicDescriptionAnnot "Funding acknowledgement - restricted for campus so this is hidden from public"^^xsd:string ;
+      vitro:displayRankAnnot "40"^^<http://www.w3.org/2001/XMLSchema#int> .
 
