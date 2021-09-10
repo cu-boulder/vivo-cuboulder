@@ -6,18 +6,18 @@
 
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.1/handlebars.min.js"></script>
 
-    <script type="text/javascript" src="/themes/cu-boulder/facetview-HTML/vendor/jquery/1.7.1/jquery-1.7.1.min.js"></script>
-    <link rel="stylesheet" href="/themes/cu-boulder/facetview-HTML/vendor/bootstrap/css/bootstrap.min.css">
-    <script type="text/javascript" src="/themes/cu-boulder/facetview-HTML/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/themes/cu-boulder/facetview-HTML/vendor/jquery-ui-1.8.18.custom/jquery-ui-1.8.18.custom.css">
-    <script type="text/javascript" src="/themes/cu-boulder/facetview-HTML/vendor/jquery-ui-1.8.18.custom/jquery-ui-1.8.18.custom.min.js"></script>
+    <script type="text/javascript" src="/themes/cu-boulder/facetview2/vendor/jquery/1.7.1/jquery-1.7.1.min.js"></script>
+    <link rel="stylesheet" href="/themes/cu-boulder/facetview2/vendor/bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="/themes/cu-boulder/facetview2/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/themes/cu-boulder/facetview2/vendor/jquery-ui-1.8.18.custom/jquery-ui-1.8.18.custom.css">
+    <script type="text/javascript" src="/themes/cu-boulder/facetview2/vendor/jquery-ui-1.8.18.custom/jquery-ui-1.8.18.custom.min.js"></script>
     <!-- <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script> -->
 
-    <script type="text/javascript" src="/themes/cu-boulder/facetview-HTML/es.js"></script>
-    <script type="text/javascript" src="/themes/cu-boulder/facetview-HTML/bootstrap2.facetview.theme.js"></script>
-    <script type="text/javascript" src="/themes/cu-boulder/facetview-HTML/jquery.facetview.js"></script>
+    <script type="text/javascript" src="/themes/cu-boulder/facetview2/es.js"></script>
+    <script type="text/javascript" src="/themes/cu-boulder/facetview2/bootstrap2.facetview.theme.js"></script>
+    <script type="text/javascript" src="/themes/cu-boulder/facetview2/jquery.facetview2.js"></script>
 
-    <link rel="stylesheet" href="/themes/cu-boulder/facetview-HTML/css/facetview.css">
+    <link rel="stylesheet" href="/themes/cu-boulder/facetview2/css/facetview.css">
     <link rel="stylesheet" href="/themes/cu-boulder/browsers.css">
     <!-- Add Font Awesome icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -170,16 +170,10 @@
 
     <script type="text/javascript">
         jQuery(document).ready(function($) {
-	    if (document.location.hostname.search("setup") !== -1) {  
-                v_search_url = '/es/fis-setup-people/person/_search';
-	    } 
-	    else 
-	    { 
-	      v_search_url = '/es/fis/person/_search';
-	    }
-
             $('.facet-view-simple').facetview({
-                search_url: v_search_url,
+                search_url: 'https://search-experts-direct-cz3fpq4rlxcbn5z27vzq4mpzaa.us-east-2.es.amazonaws.com/fispeople-v1/_search',
+                username: 'anon',
+                password: 'anonyM0us!',
                 page_size: 10,
                 sort: [
                     {"_score" : {"order" : "desc"}},
