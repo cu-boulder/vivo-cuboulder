@@ -142,14 +142,8 @@
 
                     html += "<br><div class='badge'>"
 
-                    if (record["cuscholar"]) {
-		      html += "<div><span><a href=\""+record["cuscholar"]+"\" target=\"_blank\" target=\"_blank\" onclick=\"ga('send', 'event', 'CU Scholar Link', this.href); return true;\" ><img src=" + scholarBadgeURL + "></a></span></div>";
-                    } 
-
 		    html += "<div class='altmetric-embed' data-link-target='_blank' onclick=\"ga('send','event','Altmetric Link', '" + pub + "'); return true;\" data-hide-no-mentions='true' data-badge-popover='left' data-doi=\""+record["doi"]+"\"></div>"
                     html += "</div>"
-
-
 
                     html += "</td></tr>";
                     return html;
