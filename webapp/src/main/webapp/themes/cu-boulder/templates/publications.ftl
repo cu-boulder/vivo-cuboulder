@@ -200,18 +200,6 @@
            padding-top: 10px;
         }
 
-       .pubwebsite a[title="xBest Open Access CU Scholar"] {
-         background: url('https://img.shields.io/badge/Open_Access-CU_Scholar-orange.svg?style=social&logo=open-access&logoColor=orange') no-repeat ;
-         color: transparent
-       }
-       .pubwebsite a[title="xBest Open Access"] {
-         background: url('https://img.shields.io/badge/Open_Access-orange.svg?style=social&logo=open-access&logoColor=orange') no-repeat ;
-         color: transparent
-       }
-       .pubwebsite a[title="xCU Scholar Open Access"] {
-         background: url('/images/individual/cu-scholar-image.png') no-repeat ;
-         color: transparent
-       }
        .pubwebsite a {
          max-width: 100%;
          height: auto;
